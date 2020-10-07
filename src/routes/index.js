@@ -1,9 +1,9 @@
 import Vue from 'vue';
 // Rutas
 import VueRouter from 'vue-router';
-
 // Componentes
-import LineaComponent from '../components/linea/LineaComponent.vue';
+import InicioComponent from '../components/inicio/InicioComponent.vue';
+import BarraComponent from '../components/barra/BarraComponent.vue';
 
 // ---------------------------------------------------------------//
 // Configuracion del enrutamiento                                 //
@@ -11,9 +11,9 @@ import LineaComponent from '../components/linea/LineaComponent.vue';
 Vue.use(VueRouter);
 
 const routes = [
-    {path: '/', component: LineaComponent},
-    {path: '/linea', component: LineaComponent},
-    {path: '*', component: LineaComponent }
+    {path: '/', component: InicioComponent},
+    {path: '/barra', component: BarraComponent},
+    {path: '*', component: InicioComponent }
 ];
 
 const router = new VueRouter({
