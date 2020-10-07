@@ -1,4 +1,4 @@
-# graficosvue
+# graficosVue
 
 ## Project setup
 ```
