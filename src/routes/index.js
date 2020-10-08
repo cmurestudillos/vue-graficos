@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 // Componentes
 import LineaComponent from '../components/linea/LineaComponent.vue';
 import BarraComponent from '../components/barra/BarraComponent.vue';
+import DonutComponent from '../components/donut/DonutComponent.vue';
 import ErrorComponent from '../components/shared/error/ErrorComponent.vue';
 
 // ---------------------------------------------------------------//
@@ -14,6 +15,7 @@ Vue.use(VueRouter);
 const routes = [
     {path: '/linea', component: LineaComponent},
     {path: '/barra', component: BarraComponent},
+    {path: '/donut', component: DonutComponent},
     {path: '*', component: ErrorComponent }
 ];
 

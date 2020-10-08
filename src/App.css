@@ -41,6 +41,12 @@
     max-width: 50% !important;
     margin: 0 auto !important;
 }
+#doughnut-chart{
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    margin: 0 auto !important;
+    margin-bottom: 10px !important;
+}
 
 #navbarSupportedContent ul li a {
     color: #444;
