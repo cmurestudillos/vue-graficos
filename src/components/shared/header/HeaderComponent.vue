@@ -36,6 +36,7 @@ export default {
         getGrafico(){
         // Log de seguimiento
         console.log('HeaderComponent.vue - Metodo getGrafico');
+        
         this.grafico = this.$route.path;
         }
     }    

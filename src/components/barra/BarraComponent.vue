@@ -43,24 +43,22 @@ export default {
       }
     },
     mounted () {
-        this.renderChart(this.chartData, this.options);
-    },
-    created () {
-        setInterval(() => {
+        if (this.$route.path === '/barra'){
             this.randomize()
             this.renderChart(this.chartData, this.options);
-        }, 5000)
-    },     
+        }
+    },
     methods: {
         // Metodo para generar datos aleatorios en la grafica
         randomize(){
             // Log de seguimiento
-            console.log('LineaComponent.vue - Metodo randomize');
+            console.log('BarraComponent.vue - Metodo randomize');
             
             // Only Change 3 values
-            Math.round(Math.random() * 100),59,80,
-            (Math.random() * 100),56,
-            (Math.random() * 100),40
+            Math.round(
+                Math.random() * 100),59,80,
+                (Math.random() * 100),56,
+                (Math.random() * 100),40
         }
     }     
 }

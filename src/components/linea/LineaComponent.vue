@@ -52,10 +52,10 @@ export default {
             id: 'y-axis-1',
             position: 'right',
                 gridLines: {
-                    color: 'rgba(255,0,0,0.3)',
+                    color: 'green',
                 },
                 ticks: {
-                    fontColor: 'red',
+                    fontColor: 'green',
                 }
             }],
             xAxes: [{}]                            
@@ -68,12 +68,11 @@ export default {
       }
     },
     mounted () {
-        this.renderChart(this.chartData, this.options);
-        // Actualizamos los valores de la grafica
-        setInterval(() => {
-            this.randomize()
+        if (this.$route.path === '/linea'){
+            this.generarTitulo();
+            this.pintarBoton();
             this.renderChart(this.chartData, this.options);
-        }, 10000)
+        }
     },  
     methods: {
         // Metodo para generar datos aleatorios en la grafica
@@ -86,15 +85,51 @@ export default {
                     this.chartData.datasets[i].data[j] = this.generateNumber(i);
                 }
             }
-            //this.chartData.update();
+            this.renderChart(this.chartData, this.options);
         },
         // Metodo para generar los numeros
         generateNumber(i){
-            // Log de seguimiento
-            console.log('LineaComponent.vue - Metodo generateNumber');
-
             return Math.floor((Math.random() * (i < 2 ? 100 : 1000)) + 1);
-        },        
+        },
+        generarTitulo(){
+            var titulo, hr, grafica;
+            if (titulo){
+                titulo = document.getElementById("titulo");
+                titulo.remove();
+                hr = document.getElementById("linea");
+                hr.remove();                
+            }else{
+                titulo = document.createElement("h3");               
+                titulo.innerText = "Grafico de Lineas"; 
+                titulo.id = "titulo";             
+                titulo.className = 'm-3';
+                grafica = document.getElementById('line-chart');
+                grafica.parentNode.insertBefore(titulo,grafica);
+                hr = document.createElement("hr");  
+                hr.id = "linea";              
+                grafica = document.getElementById('line-chart');
+                grafica.parentNode.insertBefore(hr,grafica);
+            }
+        },
+        pintarBoton(){
+            var boton, grafica;
+            if (boton){
+                boton = document.getElementById("aleatorio");
+                boton.remove();
+            }else{
+                boton = document.createElement("button");               
+                boton.innerText = "Aleatorio"; 
+                boton.id = "aleatorio";             
+                boton.className = 'btn ';
+                boton.className += 'btn-4 ';
+                boton.className += 'btn-block ';
+                boton.className += 'w-25 ';
+                boton.className += 'text-center';
+                boton.addEventListener('click', this.randomize);
+                grafica = document.getElementById('line-chart');
+                grafica.parentNode.appendChild(boton,grafica);
+            }
+        }        
     }      
 }
 </script>
