@@ -22,3 +22,22 @@
 .btn:hover {
     background-position: right center;
 }
+
+#line-chart{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+#navbarSupportedContent ul li a {
+    color: #444;
+    margin-right: 10px;
+}
+
+#navbarSupportedContent ul li a:hover {
+    text-decoration: none !important;
+}
+  
+.active {
+    color: white !important;
+    text-decoration: none !important;
+}

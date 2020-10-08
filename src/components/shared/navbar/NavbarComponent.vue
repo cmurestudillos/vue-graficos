@@ -1,28 +1,23 @@
 <template>
-    <b-navbar class="navbar navbar-expand-lg navbar-dark bg-custom">
-            <router-link :to="'/'" class="navbar-brand">
-                <img src="../../../assets/img/logo.png" alt="Graficos" title="Graficos">
-            </router-link>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+        <img src="../../../assets/img/logo.png" alt="Graficos" title="Graficos" class="navbar-brand">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-        <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-            <b-nav-item href="/barras" class="nav-link active">Barras</b-nav-item>
-        </b-navbar-nav>
-        </b-collapse>
-    </b-navbar>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li><router-link to="/linea" active-class="active">Lineas</router-link></li>
+                <li><router-link to="/barra" active-class="active">Barras</router-link></li>
+                <li><router-link to="/donut" active-class="active">Donut</router-link></li>
+                <li><router-link to="/radar" active-class="active">Radar</router-link></li>
+            </ul>
+        </div>
+    </nav>    
 </template>
 
 <script>
-import { BNavbar, BNavbarNav, BNavbarToggle  } from 'bootstrap-vue';
-
 export default {
-    name: 'NavbarComponent',
-    components: {
-      BNavbar,
-      BNavbarNav,
-      BNavbarToggle
-    }        
+    name: 'NavbarComponent'
 }
 </script>

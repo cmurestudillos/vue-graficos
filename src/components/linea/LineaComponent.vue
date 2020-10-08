@@ -11,7 +11,7 @@ export default {
           datasets: [
             {
                 label: 'Pizza',
-                data: [65, 59, 80, 81, 56, 55, 40],
+                data: [650, 590, 800, 810, 560, 550, 400],
                 backgroundColor: 'rgba(148,159,177,0.2)',
                 borderColor: 'rgba(148,159,177,1)',
                 pointBackgroundColor: 'rgba(148,159,177,1)',
@@ -21,7 +21,7 @@ export default {
             },
             {
                 label: 'Spaguetti',
-                data: [28, 48, 40, 19, 86, 27, 90],
+                data: [280, 480, 400, 190, 860, 270, 900],
                 backgroundColor: 'rgba(77,83,96,0.2)',
                 borderColor: 'rgba(77,83,96,1)',
                 pointBackgroundColor: 'rgba(77,83,96,1)',
@@ -69,15 +69,13 @@ export default {
     },
     mounted () {
         this.renderChart(this.chartData, this.options);
-        this.pintaBoton();
-    },
+        // Actualizamos los valores de la grafica
+        setInterval(() => {
+            this.randomize()
+            this.renderChart(this.chartData, this.options);
+        }, 10000)
+    },  
     methods: {
-        // Metodo para generar datos aleatorios en la grafica
-        pintaBoton(){
-            // Log de seguimiento
-            console.log('LineaComponent.vue - Metodo pintaBoton');
-            document.write = '<button mat-button mat-raised-button class="btn btn-4 btn-block mx-auto w-25" @click="randomize()">Aleatorio</button>';
-        },        
         // Metodo para generar datos aleatorios en la grafica
         randomize(){
             // Log de seguimiento
@@ -88,7 +86,7 @@ export default {
                     this.chartData.datasets[i].data[j] = this.generateNumber(i);
                 }
             }
-            //this.chart.update();
+            //this.chartData.update();
         },
         // Metodo para generar los numeros
         generateNumber(i){
