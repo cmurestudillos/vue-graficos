@@ -14,6 +14,7 @@ import ErrorComponent from '../components/shared/error/ErrorComponent.vue';
 Vue.use(VueRouter);
 
 const routes = [
+    {path: '/', redirect: '/linea'},
     {path: '/linea', component: LineaComponent},
     {path: '/barra', component: BarraComponent},
     {path: '/donut', component: DonutComponent},
