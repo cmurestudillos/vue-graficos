@@ -47,7 +47,11 @@
     margin: 0 auto !important;
     margin-bottom: 10px !important;
 }
-
+#radar-chart{
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    margin: 0 auto !important;    
+}
 #navbarSupportedContent ul li a {
     color: #444;
     margin-right: 10px;
