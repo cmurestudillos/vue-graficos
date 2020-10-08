@@ -37,7 +37,9 @@
     margin: 0 auto;
 }
 #bar-chart{
-    display: block;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    margin: 0 auto !important;
 }
 
 #navbarSupportedContent ul li a {
