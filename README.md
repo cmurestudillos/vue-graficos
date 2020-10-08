@@ -1,24 +1,15 @@
-# graficosVue
+# Graficos - Vue.js
 
-## Project setup
-```
-npm install
-```
+Aplicacion web de graficos realizada con Vue.js, Material Design, Bootstrap y charts.js.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Instalar dependencias
+- Ejecutar en terminal comando: `npm install`.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Iniciar proyecto
+- Ejecutar en terminal el comando `npm run serve` e introducir en el navegador `http://localhost:8080/`.
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Generar proyecto para produccion
+- Ejecutar en terminal el comando `npm run build` y se genera una directorio `dist/`.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Ayuda
+Para mas informacion, [Vue-cli](https://cli.vuejs.org/config/).
