@@ -31,33 +31,12 @@
     background-position: right center;
 }
 
-#line-chart{
-    flex: 0 0 50%;
-    max-width: 50%;
-    margin: 0 auto;
-}
-#bar-chart{
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-    margin: 0 auto !important;
-}
-#doughnut-chart{
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-    margin: 0 auto !important;
-    margin-bottom: 10px !important;
-}
-#radar-chart{
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-    margin: 0 auto !important;    
-}
-#navbarSupportedContent ul li a {
+.item a{
     color: #444;
     margin-right: 10px;
 }
 
-#navbarSupportedContent ul li a:hover {
+.item a:hover {
     text-decoration: none !important;
 }
   
@@ -65,3 +44,4 @@
     color: white !important;
     text-decoration: none !important;
 }
+

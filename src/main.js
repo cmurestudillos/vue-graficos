@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import Style from './App.css';
+import Responsive from './responsive.css';
 import GoogleFonts from './assets/fonts/googlefonts.css';
 // Rutas
 import router from './routes/index';
@@ -26,5 +27,5 @@ Vue.use(VueCharts);
 
 new Vue({
   router,
-  render: h => h(App, Style, GoogleFonts),
+  render: h => h(App, Style, Responsive, GoogleFonts),
 }).$mount('#app')

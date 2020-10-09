@@ -1,25 +1,28 @@
 <template>
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-            <img src="../../../assets/img/logo.png" alt="Graficos" title="Graficos" class="navbar-brand">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <b-navbar toggleable="lg" type="dark" class="bg-custom">
+        <b-navbar-brand>
+            <img src="../../../assets/img/logo.png" alt="Graficos" title="Graficos">
+        </b-navbar-brand>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li><router-link to="/linea" active-class="active">Lineas</router-link></li>
-                    <li><router-link to="/barra" active-class="active">Barras</router-link></li>
-                    <li><router-link to="/donut" active-class="active">Donut</router-link></li>
-                    <li><router-link to="/radar" active-class="active">Radar</router-link></li>
-                </ul>
-            </div>
-        </nav>    
-    </div>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+        <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+            <b-nav-item class="item"><router-link to="/linea" active-class="active">Lineas</router-link></b-nav-item>
+            <b-nav-item class="item"><router-link to="/barra" active-class="active">Barras</router-link></b-nav-item>
+            <b-nav-item class="item"><router-link to="/donut" active-class="active">Donut</router-link></b-nav-item>
+            <b-nav-item class="item"><router-link to="/radar" active-class="active">Radar</router-link></b-nav-item>
+        </b-navbar-nav>
+        </b-collapse>
+    </b-navbar>    
 </template>
 
 <script>
+import { BNavbar } from 'bootstrap-vue';
 export default {
-    name: 'NavbarComponent'
+    name: 'NavbarComponent',
+    components:{
+        BNavbar
+    }
 }
 </script>
