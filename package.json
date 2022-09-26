@@ -1,7 +1,10 @@
 {
-  "name": "graficosVue",
-  "version": "0.1.0",
+  "name": "graficos-vue",
+  "version": "1.0.0",
   "private": true,
+  "description": "SPA web con diferentes graficos de muestra.",
+  "author": "Carlos Mur",
+  "license": "MIT",  
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
